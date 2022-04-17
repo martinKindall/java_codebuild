@@ -3,7 +3,8 @@
 Just learning the basics of AWS CodeBuild. The steps for the build are
 specified in the __buildspec.yaml__ file.
 
-The allowed CodeBuild runtimes are described [here](https://docs.aws.amazon.com/codebuild/latest/userguide/runtime-versions.html).
+Available runtimes and their corresponding
+images [here](https://docs.aws.amazon.com/codebuild/latest/userguide/available-runtimes.html).
 
 ### Run CodeBuild locally
 
@@ -11,8 +12,10 @@ Follow the instructions [here](https://docs.aws.amazon.com/codebuild/latest/user
 the following command in oder to be able to download the image from ECR:
 
 ```bash
-aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/codebuild/amazonlinux2-x86_64-standard
+aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/codebuild/<SELECTED-IMAGE>
 ```
+
+As image you could use Ubuntu 20.04 (aws/codebuild/standard:5.0) or else, depending on the runtime you need.
 
 Finally to run CodeBuild locally:
 ```bash
