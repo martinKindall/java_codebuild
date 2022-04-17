@@ -1,0 +1,15 @@
+version: 0.2
+
+env:
+  variables:
+    environment: "development"
+    dog: "Thonka"
+
+phases:
+  install:
+    commands:
+      - "echo 'Hello from buildspec!'"
+      - "echo \"My dog name is $dog\""
+  build:
+    commands:
+      - "echo 'Building'"
