@@ -8,7 +8,7 @@ env:
 phases:
   install:
     runtime-versions:
-      java: corretto11
+      java: openjdk11
   build:
     commands:
       - echo My dog is $dog
