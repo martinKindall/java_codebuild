@@ -7,9 +7,9 @@ public class BasicTest {
 
     @Test
     public void testStringsAreEqual() {
-        var anString = "Walrus Code";
+        var aString = "Walrus Code";
 
-        Assertions.assertEquals(anString, "Walrus Code");
+        Assertions.assertEquals(aString, "Walrus Code");
     }
 
     @Test
